@@ -776,119 +776,187 @@
 
 
 /* ____Menu_Page_Starts_From_Here____ */
+/* =========================================================
+   MENU HERO
+========================================================= */
+
 #Menu_Hero{
     width: 100%;
     min-height: 100vh;
+
     >section{
         width: 100%;
-        height: 100vh;        
+        height: 100vh;
+
         >nav{
             width: 100%;
             height: 80px;
+
             border-bottom: 1px solid var(--footer-text);
-            position: fixed;  
-            background-color: white; 
+
+            position: fixed;
             top: 0;
             left: 0;
+
+            background-color: white;
+
             z-index: 100;
+
             >div{
                 width: 90%;
                 height: 100%;
+
                 margin-left: 5%;
+
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
                 >figure{
                     width: 160px;
                     height: 40px;
+
                     >img{
                         width: 100%;
                         height: 40px;
                     }
                 }
+
                 >ul{
                     display: flex;
                     gap: 4px;
+
                     >li{
+
                         >a{
                             padding: 12px 16px;
+
                             font-family: var(--inter);
                             font-size: 14px;
+
                             color: var(--nav-color);
+
                             font-weight: 500;
+
                             transition: .3s;
                         }
+
                         &:hover>a{
                             color: var(--contact-bg);
                         }
                     }
                 }
+
                 >a{
                     padding: 10px 18px;
+
                     background-color: var(--link-bg);
+
                     font-family: var(--inter);
+
                     color: white;
+
                     font-weight: 500;
                     font-size: 14px;
+
                     border-radius: 6px;
+
                     transition: .4s;
+
                     &:hover{
                         background-color: var(--contact-bg);
                     }
                 }
             }
         }
-        >div{
+
+
+        /* HERO CONTENT */
+
+        >.menu_hero_content{
             display: flex;
+
             width: 100%;
             height: 580px;
+
             background-color: var(--footer-bg);
+
             >section{
                 width: 60%;
                 height: 200px;
+
                 margin: 16% 20%;
+
                 text-align: center;
-                >span,p{
+
+                >span,
+                >p{
                     font-family: var(--inter);
                 }
+
                 >span{
                     color: var(--text-red);
+
                     font-size: 14px;
                     font-weight: 500;
+
                     letter-spacing: 1px;
                 }
+
                 >h1{
                     font-size: 60px;
+
                     margin-block: 1rem;
+
                     color: white;
                 }
+
                 >p{
                     color: var(--footer-text);
+
                     font-weight: 500;
+
                     font-size: 17px;
                 }
             }
         }
+
+
+        /* SECOND LINKS */
+
         .second_links{
             width: 100%;
             height: 54px;
+
             border-bottom: 1px solid var(--text-color);
-            background-color: white; 
+
+            background-color: white;
+
             align-items: center;
+
             >div{
                 display: flex;
                 align-items: center;
+
                 width: 400px;
                 height: 50px;
+
                 margin-left: 5%;
+
                 gap: 4px;
+
                 >a{
                     padding: 6px 8px;
+
                     color: var(--text-color);
+
                     font-family: var(--inter);
+
                     font-weight: 600;
                     font-size: 14px;
+
                     transition: .3s;
+
                     &:hover{
                         color: var(--link-bg);
                     }
@@ -897,621 +965,795 @@
         }
     }
 }
-/* ____End_Of_Menu_Hero____ */
 
 
-#Antipasti_Foods{
+/* =========================================================
+   COMMON FOOD SECTIONS
+========================================================= */
+
+#Antipasti_Foods,
+#Primi_Foods,
+#Secondi_Foods,
+#Dolci_Foods{
+
     width: 100%;
+
     min-height: 87vh;
+
     >div{
         width: 90%;
-        height: 87vh;
-        border-bottom: 1px solid var(--border);
+
+        min-height: 87vh;
+
         margin-left: 5%;
-        >section{
+
+        border-bottom: 1px solid var(--border);
+
+        >.food_heading{
             width: 100%;
             height: 120px;
+
             >h2{
                 margin-top: 30px;
+
                 font-size: 26px;
+
                 font-family: var(--playfair);
             }
+
             >p{
                 color: var(--text-color);
+
                 font-family: var(--inter);
+
                 font-size: 15px;
+
                 font-weight: 500;
+
                 margin-top: 6px;
             }
         }
+
+
+        /* FOOD GRID */
+
         .foods{
+
             width: 100%;
-            height: 370px;
+
+            min-height: 370px;
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            grid-template-rows:
+                repeat(2, minmax(0, 1fr));
+
             gap: 20px;
+
+            position: relative;
+
+
             >div{
+
+                min-width: 0;
+
+                box-sizing: border-box;
+
                 border-radius: 10px;
+
                 border: 1px solid var(--border);
+
                 padding: 34px;
+
                 transition: .3s;
+
                 position: relative;
+
+
                 >section{
+
                     display: flex;
+
                     justify-content: space-between;
+
+                    gap: 15px;
+
+
                     >h3{
+
+                        min-width: 0;
+
                         font-size: 22px;
+
                         font-family: var(--playfair);
+
                         font-weight: normal;
                     }
+
+
                     >span{
+
+                        flex-shrink: 0;
+
                         color: var(--contact-bg);
+
                         font-size: 22px;
+
                         font-weight: bold;
                     }
                 }
-                >p,span{
+
+
+                >p,
+                >span{
+
                     font-family: var(--inter);
                 }
+
+
                 >p{
+
                     color: var(--text-color);
+
                     font-weight: 500;
+
                     margin-block: 10px;
+
                     font-size: 15px;
+
+                    line-height: 1.6;
                 }
+
+
                 >span{
-                    background-color: rgb(186, 248, 186) ;
+
+                    background-color: rgb(186, 248, 186);
+
                     padding: 2px 8px;
+
                     font-size: 12px;
+
                     border-radius: 100px;
+
                     color: rgb(20, 85, 20);
+
                     font-weight: 500;
                 }
+
+
                 &:hover{
+
                     border: 1px solid var(--text-red);
                 }
             }
-            >section{
+
+
+            /* CHEF'S PICK */
+
+            >.chef_pick{
+
                 position: absolute;
+
+                top: 0;
+
                 right: 65px;
+
+                left: auto;
+
+                padding: 0;
+
+                border: none;
+
+                min-width: auto;
+
+                width: auto;
+
+                height: auto;
+
+                z-index: 5;
+
+
                 >span{
+
                     font-family: var(--inter);
+
                     font-size: 12px;
+
                     color: white;
+
                     background-color: var(--link-bg);
+
                     padding: 2px 8px;
+
                     border-radius: 100px;
+
                     font-weight: 500;
                 }
             }
         }
     }
 }
-/* ____End_Of_Antipasti_Foods____ */
 
+
+/* =========================================================
+   PRIMI EXTRA TAGS
+========================================================= */
 
 #Primi_Foods{
-    width: 100%;
-    min-height: 87vh;
-    >div{
-        width: 90%;
-        height: 87vh;
-        border-bottom: 1px solid var(--border);
-        margin-left: 5%;
-        >section{
-            width: 100%;
-            height: 120px;
-            >h2{
-                margin-top: 30px;
-                font-size: 26px;
-                font-family: var(--playfair);
-            }
-            >p{
-                color: var(--text-color);
-                font-family: var(--inter);
-                font-size: 15px;
-                font-weight: 500;
-                margin-top: 6px;
-            }
-        }
-        .foods{
-            width: 100%;
-            height: 370px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 20px;
+
+    .foods{
+
+        >div{
+
             >div{
-                border-radius: 10px;
-                border: 1px solid var(--border);
-                padding: 34px;
-                transition: .3s;
-                position: relative;
-                >section{
-                    display: flex;
-                    justify-content: space-between;
-                    >h3{
-                        font-size: 22px;
-                        font-family: var(--playfair);
-                        font-weight: normal;
-                    }
-                    >span{
-                        color: var(--contact-bg);
-                        font-size: 22px;
-                        font-weight: bold;
-                    }
-                }
-                >p,span{
-                    font-family: var(--inter);
-                }
-                >p{
-                    color: var(--text-color);
-                    font-weight: 500;
-                    margin-block: 10px;
-                    font-size: 15px;
-                }
+
+                display: flex;
+
+                align-items: center;
+
+                gap: 10px;
+
+                flex-wrap: wrap;
+
                 >span{
-                    background-color: rgb(186, 248, 186);
+
                     padding: 2px 8px;
+
                     font-size: 12px;
+
                     border-radius: 100px;
-                    color: rgb(20, 85, 20);
+
                     font-weight: 500;
-                }
-                >div{
-                    >span{
-                        padding: 2px 8px;
-                        font-size: 12px;
-                        border-radius: 100px;
-                        font-weight: 500;
-                        &:nth-of-type(1){
-                            background-color: rgb(186, 248, 186);
-                            color: rgb(20, 85, 20);
-                        }
-                        &:nth-of-type(2){
-                            background-color: rgb(243, 216, 166);
-                            color: rgb(180, 124, 19);
-                            margin-left: 10px;
-                        }
+
+                    &:nth-of-type(1){
+
+                        background-color: rgb(186, 248, 186);
+
+                        color: rgb(20, 85, 20);
                     }
-                }
-                &:hover{
-                    border: 1px solid var(--text-red);
-                }
-            }
-            >section{
-                position: absolute;
-                left: 594px;
-                >span{
-                    font-family: var(--inter);
-                    font-size: 12px;
-                    color: white;
-                    background-color: var(--link-bg);
-                    padding: 2px 8px;
-                    border-radius: 100px;
-                    font-weight: 500;
+
+                    &:nth-of-type(2){
+
+                        background-color: rgb(243, 216, 166);
+
+                        color: rgb(180, 124, 19);
+                    }
                 }
             }
         }
     }
 }
-/* ____End_Of_Primi_Foods____ */
 
+
+/* =========================================================
+   SECONDI
+========================================================= */
 
 #Secondi_Foods{
-    width: 100%;
-    min-height: 87vh;
-    >div{
-        width: 90%;
-        height: 87vh;
-        border-bottom: 1px solid var(--border);
-        margin-left: 5%;
-        >section{
-            width: 100%;
-            height: 120px;
-            >h2{
-                margin-top: 30px;
-                font-size: 26px;
-                font-family: var(--playfair);
-            }
-            >p{
-                color: var(--text-color);
-                font-family: var(--inter);
-                font-size: 15px;
-                font-weight: 500;
-                margin-top: 6px;
-            }
-        }
-        .foods{
-            width: 100%;
-            height: 370px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 20px;
-            >div{
-                border-radius: 10px;
-                border: 1px solid var(--border);
-                padding: 34px;
-                transition: .3s;
-                position: relative;
-                >section{
-                    display: flex;
-                    justify-content: space-between;
-                    >h3{
-                        font-size: 22px;
-                        font-family: var(--playfair);
-                        font-weight: normal;
-                    }
-                    >span{
-                        color: var(--contact-bg);
-                        font-size: 22px;
-                        font-weight: bold;
-                    }
-                }
-                >p,span{
-                    font-family: var(--inter);
-                }
-                >p{
-                    color: var(--text-color);
-                    font-weight: 500;
-                    margin-block: 10px;
-                    font-size: 15px;
-                }
-                >span{
-                    background-color: rgb(243, 216, 166);
-                    color: rgb(180, 124, 19);
-                    padding: 2px 8px;
-                    font-size: 12px;
-                    border-radius: 100px;
-                    font-weight: 500;
-                }
-                &:hover{
-                    border: 1px solid var(--text-red);
-                }
-            }
-            >section{
-                position: absolute;
-                left: 594px;
-                >span{
-                    font-family: var(--inter);
-                    font-size: 12px;
-                    color: white;
-                    background-color: var(--link-bg);
-                    padding: 2px 8px;
-                    border-radius: 100px;
-                    font-weight: 500;
-                }
+
+    .foods{
+
+        >div{
+
+            >span{
+
+                background-color: rgb(243, 216, 166);
+
+                color: rgb(180, 124, 19);
             }
         }
     }
 }
-/* ____End_Of_Secondi_Foods____ */
 
+
+/* =========================================================
+   DOLCI
+========================================================= */
 
 #Dolci_Foods{
-    width: 100%;
-    min-height: 87vh;
-    >div{
-        width: 90%;
-        height: 87vh;
-        margin-left: 5%;
-        >section{
-            width: 100%;
-            height: 120px;
-            >h2{
-                margin-top: 30px;
-                font-size: 26px;
-                font-family: var(--playfair);
-            }
-            >p{
-                color: var(--text-color);
-                font-family: var(--inter);
-                font-size: 15px;
-                font-weight: 500;
-                margin-top: 6px;
-            }
-        }
-        .foods{
-            width: 100%;
-            height: 370px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 20px;
-            >div{
-                border-radius: 10px;
-                border: 1px solid var(--border);
-                padding: 34px;
-                transition: .3s;
-                position: relative;
-                >section{
-                    display: flex;
-                    justify-content: space-between;
-                    >h3{
-                        font-size: 22px;
-                        font-family: var(--playfair);
-                        font-weight: normal;
-                    }
-                    >span{
-                        color: var(--contact-bg);
-                        font-size: 22px;
-                        font-weight: bold;
-                    }
-                }
-                >p,span{
-                    font-family: var(--inter);
-                }
-                >p{
-                    color: var(--text-color);
-                    font-weight: 500;
-                    margin-block: 10px;
-                    font-size: 15px;
-                }
-                >span{
-                    background-color: rgb(243, 216, 166);
-                    color: rgb(180, 124, 19);
-                    padding: 2px 8px;
-                    font-size: 12px;
-                    border-radius: 100px;
-                    font-weight: 500;
-                }
-                &:hover{
-                    border: 1px solid var(--text-red);
-                }
-            }
-            >section{
-                position: absolute;
-                left: 594px;
-                >span{
-                    font-family: var(--inter);
-                    font-size: 12px;
-                    color: white;
-                    background-color: var(--link-bg);
-                    padding: 2px 8px;
-                    border-radius: 100px;
-                    font-weight: 500;
-                }
+
+    .foods{
+
+        >div{
+
+            >span{
+
+                background-color: rgb(243, 216, 166);
+
+                color: rgb(180, 124, 19);
             }
         }
     }
 }
-/* ____End_Of_Dolci_Foods____ */
 
+
+/* =========================================================
+   INFORMATION
+========================================================= */
 
 #Information{
+
     width: 100%;
+
     min-height: 40vh;
+
     background-color: var(--background-color);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
+
     >div{
+
         width: 90%;
-        height: 24vh;
+
+        min-height: 24vh;
+
         background-color: white;
+
         border-radius: 10px;
+
         border: 1px solid var(--border);
+
         padding: 30px;
-        >h3,p{
+
+        box-sizing: border-box;
+
+
+        >h3,
+        >p{
+
             font-weight: 500;
         }
+
+
         >h3{
+
             font-family: var(--playfair);
+
             font-size: 20px;
+
             margin-bottom: 10px;
         }
+
+
         >p{
+
             color: var(--text-color);
+
             font-family: var(--inter);
+
             font-size: 15px;
+
+            line-height: 1.6;
         }
+
+
         >section{
+
             display: flex;
+
             margin-top: 20px;
+
             gap: 20px;
+
+            flex-wrap: wrap;
+
+
             .icon_1{
+
                 >i{
+
                     padding: 6px;
+
                     border-radius: 50px;
+
                     background-color: rgb(186, 248, 186);
+
                     color: rgb(20, 85, 20);
                 }
+
                 >span{
+
                     color: var(--text-color);
+
                     font-family: var(--inter);
+
                     font-size: 14px;
+
                     font-weight: 500;
                 }
             }
+
+
             .icon_2{
+
                 >i{
+
                     padding: 6px;
+
                     border-radius: 50px;
+
                     background-color: rgb(243, 216, 166);
+
                     color: rgb(180, 124, 19);
                 }
+
                 >span{
+
                     color: var(--text-color);
+
                     font-family: var(--inter);
+
                     font-size: 14px;
+
                     font-weight: 500;
                 }
             }
+
+
             .icon_3{
+
                 >i{
+
                     padding: 6px;
+
                     border-radius: 50px;
+
                     background-color: var(--background-color);
+
                     color: var(--footer-bg);
                 }
+
                 >span{
+
                     color: var(--text-color);
+
                     font-family: var(--inter);
+
                     font-size: 14px;
+
                     font-weight: 500;
                 }
             }
         }
     }
 }
-/* ____End_Of_Information____ */
 
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 #Quick_Links{
+
     width: 100%;
+
     min-height: 80vh;
+
     background-color: var(--footer-bg);
+
     display: flex;
+
+
     >div{
+
         width: 90%;
+
         margin-left: 5%;
+
+
         .links{
+
             width: 100%;
+
             height: 300px;
+
             margin-top: 90px;
+
+
             >div{
+
                 height: 100%;
+
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(1, 1fr);
+
+                grid-template-columns:
+                    repeat(4, minmax(0, 1fr));
+
+                grid-template-rows: 1fr;
+
                 gap: 30px;
+
+
                 >section{
-                    &:nth-of-type(1){  
+
+                    min-width: 0;
+
+
+                    &:nth-of-type(1){
+
                         width: 300px;
+
+
                         >img{
+
                             width: 170px;
+
                             height: 30px;
                         }
+
+
                         >p{
+
                             color: var(--footer-text);
+
                             font-family: var(--inter);
+
                             margin-block: 16px;
                         }
+
+
                         >section{
+
                             >div{
+
                                 margin-block: 12px;
+
+
                                 >i{
+
                                     color: var(--link-bg);
+
                                     margin-right: 10px;
                                 }
+
+
                                 >a{
+
                                     color: var(--footer-text);
+
                                     font-family: var(--inter);
+
                                     transition: .3s;
+
+
                                     &:hover{
+
                                         color: var(--lighter);
                                     }
                                 }
+
+
                                 >span{
+
                                     color: var(--footer-text);
+
                                     font-family: var(--inter);
                                 }
                             }
                         }
+
+
                         >div{
+
                             margin-block: 14px;
+
+
                             >i{
+
                                 color: var(--footer-text);
+
                                 padding: 10px;
+
                                 font-size: 20px;
+
                                 transition: .3s;
+
                                 cursor: pointer;
+
+
                                 &:hover{
+
                                     color: var(--lighter);
                                 }
                             }
                         }
                     }
+
+
                     &:nth-of-type(2){
+
                         width: 200px;
+
+
                         >ul{
+
                             display: block;
+
                             text-align: center;
+
+
                             >li{
+
                                 margin-bottom: 10px;
+
                                 color: white;
+
                                 font-family: var(--inter);
+
                                 font-weight: 500;
+
+
                                 >a{
+
                                     color: var(--footer-text);
+
                                     padding: 4px 10px;
+
                                     transition: .4s;
+
                                     font-weight: normal;
                                 }
+
+
                                 &:hover>a{
-                                    border-bottom: 1px solid var(--last-text);
+
+                                    border-bottom:
+                                        1px solid var(--last-text);
+
                                     color: var(--lighter);
                                 }
                             }
                         }
                     }
+
+
                     &:nth-of-type(3){
+
                         width: 260px;
+
                         display: flex;
+
                         justify-content: space-between;
+
                         margin-right: 30px;
+
+
                         >ul{
+
                             display: block;
+
+
                             >li{
+
                                 &:nth-of-type(1){
+
                                     color: white;
+
                                     font-weight: 500;
+
                                     margin-bottom: 10px;
+
                                     font-size: 16px;
                                 }
+
                                 font-family: var(--inter);
+
                                 color: var(--footer-text);
+
                                 font-size: 14px;
                             }
+
+
                             &:nth-of-type(2){
+
                                 margin-top: 32px;
+
+
                                 >li{
+
                                     &:nth-of-type(1){
+
                                         color: var(--link-bg);
+
                                         margin-bottom: 0;
+
                                         font-size: 14px;
                                     }
                                 }
                             }
                         }
                     }
+
+
                     &:nth-of-type(4){
+
                         display: block;
-                        >h4,p{
+
+
+                        >h4,
+                        >p{
+
                             font-family: var(--inter);
                         }
+
+
                         >h4{
+
                             color: white;
                         }
+
+
                         >p{
+
                             margin-block: 1rem;
+
                             color: var(--footer-text);
                         }
+
+
                         >form{
+
                             display: block;
+
+
                             >input{
+
                                 width: 250px;
+
+                                max-width: 100%;
+
                                 height: 50px;
+
                                 padding: 1rem;
+
+                                box-sizing: border-box;
+
                                 border-radius: 5px;
-                                border: 1px solid var(--footer-text);
+
+                                border:
+                                    1px solid var(--footer-text);
+
                                 background-color: transparent;
+
                                 color: var(--footer-text);
                             }
+
+
                             >button{
+
                                 width: 250px;
+
+                                max-width: 100%;
+
                                 height: 46px;
+
                                 margin-top: 20px;
+
                                 background-color: var(--link-bg);
+
                                 border: none;
+
                                 border-radius: 5px;
+
                                 color: white;
+
                                 cursor: pointer;
+
                                 transition: .3s;
+
+
                                 &:hover{
-                                    background-color: var(--contact-bg);
+
+                                    background-color:
+                                        var(--contact-bg);
                                 }
                             }
                         }
@@ -1519,25 +1761,49 @@
                 }
             }
         }
+
+
         .footer_content{
+
             width: 100%;
-            height: 60px;
-            border-top: 1px solid var(--text-color);
+
+            min-height: 60px;
+
+            border-top:
+                1px solid var(--text-color);
+
             display: flex;
+
             justify-content: space-between;
-            align-items: end;
+
+            align-items: center;
+
+
             >div{
-                >p,a{
+
+                >p,
+                >a{
+
                     color: var(--footer-text);
+
                     font-family: var(--inter);
+
                     font-size: 14px;
                 }
+
                 >a{
+
                     transition: .3s;
+
+
                     &:nth-of-type(1){
+
                         margin-right: 1rem;
                     }
+
+
                     &:hover{
+
                         color: var(--lighter);
                     }
                 }
@@ -1986,6 +2252,8 @@
 }
 
 
+
+/* _____Home_Responsive_Design____ */
 /* =================================================
    TABLET
    ================================================= */
@@ -2825,5 +3093,1132 @@
         grid-template-rows: repeat(4, 200px);
 
         height: auto;
+    }
+}
+
+
+
+/* _____Menu_Responsive_Design____ */
+/* =========================================================
+   DESKTOP HAMBURGER
+========================================================= */
+
+#Menu_Hero #menu,
+#Menu_Hero .hamburger{
+
+    display: none;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px){
+
+    #Menu_Hero > section > nav > div{
+
+        width: 92%;
+
+        margin-left: 4%;
+    }
+
+
+    #Menu_Hero > section > nav > div > ul > li > a{
+
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+
+
+    #Menu_Hero > section > nav > div > a{
+
+        padding: 9px 12px;
+
+        font-size: 13px;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content{
+
+        height: 530px;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section{
+
+        width: 80%;
+
+        margin: 20% 10%;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section > h1{
+
+        font-size: 50px;
+    }
+
+
+    #Antipasti_Foods > div,
+    #Primi_Foods > div,
+    #Secondi_Foods > div,
+    #Dolci_Foods > div{
+
+        width: 92%;
+
+        margin-left: 4%;
+    }
+
+
+    #Quick_Links > div{
+
+        width: 92%;
+
+        margin-left: 4%;
+    }
+
+
+    #Quick_Links > div .links{
+
+        height: auto;
+    }
+
+
+    #Quick_Links > div .links > div{
+
+        height: auto;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-template-rows: auto;
+
+        row-gap: 50px;
+    }
+
+
+    #Quick_Links > div .links > div > section{
+
+        width: 100% !important;
+
+        margin-right: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px){
+
+    /* NAVBAR */
+
+    #Menu_Hero > section > nav{
+
+        height: 70px;
+    }
+
+
+    #Menu_Hero > section > nav > div{
+
+        width: 90%;
+
+        margin-left: 5%;
+    }
+
+
+    #Menu_Hero > section > nav > div > figure{
+
+        width: 130px;
+    }
+
+
+    #Menu_Hero #menu{
+
+        display: none;
+    }
+
+
+    #Menu_Hero .hamburger{
+
+        display: block;
+
+        font-size: 28px;
+
+        color: var(--nav-color);
+
+        cursor: pointer;
+
+        order: 3;
+    }
+
+
+    #Menu_Hero > section > nav > div > ul{
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 10px 0;
+
+        background-color: white;
+
+        flex-direction: column;
+    }
+
+
+    #Menu_Hero > section > nav > div > ul > li{
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    #Menu_Hero > section > nav > div > ul > li > a{
+
+        display: block;
+
+        padding: 14px;
+    }
+
+
+    #Menu_Hero #menu:checked ~ .nav-links{
+
+        display: flex;
+    }
+
+
+    #Menu_Hero > section > nav > div > a{
+
+        display: none;
+    }
+
+
+    /* HERO */
+
+    #Menu_Hero > section > .menu_hero_content{
+
+        height: 430px;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section{
+
+        width: 90%;
+
+        height: auto;
+
+        margin: 30% 5%;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section > h1{
+
+        font-size: 40px;
+
+        line-height: 1.2;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section > p{
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section > p > br{
+
+        display: none;
+    }
+
+
+    /* SECOND LINKS */
+
+    #Menu_Hero > section > .second_links{
+
+        overflow-x: auto;
+    }
+
+
+    #Menu_Hero > section > .second_links > div{
+
+        width: max-content;
+
+        margin-left: 5%;
+    }
+
+
+    /* FOOD SECTIONS */
+
+    #Antipasti_Foods,
+    #Primi_Foods,
+    #Secondi_Foods,
+    #Dolci_Foods{
+
+        min-height: auto;
+    }
+
+
+    #Antipasti_Foods > div,
+    #Primi_Foods > div,
+    #Secondi_Foods > div,
+    #Dolci_Foods > div{
+
+        width: 90%;
+
+        min-height: auto;
+
+        margin-left: 5%;
+
+        padding-bottom: 40px;
+    }
+
+
+    #Antipasti_Foods > div > .food_heading,
+    #Primi_Foods > div > .food_heading,
+    #Secondi_Foods > div > .food_heading,
+    #Dolci_Foods > div > .food_heading{
+
+        height: 100px;
+    }
+
+
+    /* 
+       در موبایل کارت‌ها یک ستون می‌شوند.
+       این مهم‌ترین قسمت Responsive است.
+    */
+
+    #Antipasti_Foods .foods,
+    #Primi_Foods .foods,
+    #Secondi_Foods .foods,
+    #Dolci_Foods .foods{
+
+        width: 100%;
+
+        min-height: auto;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+
+        gap: 15px;
+    }
+
+
+    #Antipasti_Foods .foods > div,
+    #Primi_Foods .foods > div,
+    #Secondi_Foods .foods > div,
+    #Dolci_Foods .foods > div{
+
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 180px;
+
+        box-sizing: border-box;
+
+        padding: 25px;
+    }
+
+
+    #Antipasti_Foods .foods > div > section,
+    #Primi_Foods .foods > div > section,
+    #Secondi_Foods .foods > div > section,
+    #Dolci_Foods .foods > div > section{
+
+        gap: 15px;
+    }
+
+
+    #Antipasti_Foods .foods > div > section > h3,
+    #Primi_Foods .foods > div > section > h3,
+    #Secondi_Foods .foods > div > section > h3,
+    #Dolci_Foods .foods > div > section > h3{
+
+        font-size: 20px;
+
+        line-height: 1.4;
+    }
+
+
+    #Antipasti_Foods .foods > div > section > span,
+    #Primi_Foods .foods > div > section > span,
+    #Secondi_Foods .foods > div > section > span,
+    #Dolci_Foods .foods > div > section > span{
+
+        font-size: 19px;
+    }
+
+
+    #Antipasti_Foods .foods > div > p,
+    #Primi_Foods .foods > div > p,
+    #Secondi_Foods .foods > div > p,
+    #Dolci_Foods .foods > div > p{
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /*
+       <br> های داخل متن در موبایل
+       باعث بیرون زدن متن نمی‌شوند.
+    */
+
+    #Antipasti_Foods .foods > div > p > br,
+    #Primi_Foods .foods > div > p > br,
+    #Secondi_Foods .foods > div > p > br,
+    #Dolci_Foods .foods > div > p > br{
+
+        display: none;
+    }
+
+
+    /* CHEF'S PICK */
+
+    #Antipasti_Foods .foods > .chef_pick,
+    #Primi_Foods .foods > .chef_pick,
+    #Secondi_Foods .foods > .chef_pick,
+    #Dolci_Foods .foods > .chef_pick{
+
+        position: absolute;
+
+        top: 0;
+
+        right: 10px;
+
+        left: auto;
+
+        width: auto;
+
+        min-width: auto;
+
+        min-height: auto;
+
+        padding: 0;
+
+        border: none;
+    }
+
+
+    /* INFORMATION */
+
+    #Information{
+
+        min-height: auto;
+
+        padding: 40px 0;
+    }
+
+
+    #Information > div{
+
+        width: 90%;
+
+        min-height: auto;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+    }
+
+
+    #Information > div > section{
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    /* FOOTER */
+
+    #Quick_Links{
+
+        min-height: auto;
+    }
+
+
+    #Quick_Links > div{
+
+        width: 90%;
+
+        margin-left: 5%;
+    }
+
+
+    #Quick_Links > div .links{
+
+        height: auto;
+
+        margin-top: 60px;
+    }
+
+
+    #Quick_Links > div .links > div{
+
+        height: auto;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+
+        gap: 40px;
+    }
+
+
+    #Quick_Links > div .links > div > section{
+
+        width: 100% !important;
+
+        margin-right: 0 !important;
+    }
+
+
+    #Quick_Links > div .footer_content{
+
+        min-height: auto;
+
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+
+    #Quick_Links > div .footer_content > div{
+
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px){
+
+    /* HERO */
+
+    #Menu_Hero > section > .menu_hero_content{
+
+        height: 400px;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section{
+
+        margin-top: 32%;
+    }
+
+
+    #Menu_Hero > section > .menu_hero_content > section > h1{
+
+        font-size: 32px;
+    }
+
+
+    /* FOOD CARDS */
+
+    #Antipasti_Foods > div,
+    #Primi_Foods > div,
+    #Secondi_Foods > div,
+    #Dolci_Foods > div{
+
+        width: 92%;
+
+        margin-left: 4%;
+    }
+
+
+    #Antipasti_Foods .foods > div,
+    #Primi_Foods .foods > div,
+    #Secondi_Foods .foods > div,
+    #Dolci_Foods .foods > div{
+
+        padding: 20px;
+
+        min-height: 170px;
+    }
+
+
+    #Antipasti_Foods .foods > div > section > h3,
+    #Primi_Foods .foods > div > section > h3,
+    #Secondi_Foods .foods > div > section > h3,
+    #Dolci_Foods .foods > div > section > h3{
+
+        font-size: 18px;
+    }
+
+
+    #Antipasti_Foods .foods > div > section > span,
+    #Primi_Foods .foods > div > section > span,
+    #Secondi_Foods .foods > div > section > span,
+    #Dolci_Foods .foods > div > section > span{
+
+        font-size: 17px;
+    }
+
+
+    #Antipasti_Foods .foods > div > p,
+    #Primi_Foods .foods > div > p,
+    #Secondi_Foods .foods > div > p,
+    #Dolci_Foods .foods > div > p{
+
+        font-size: 13px;
+    }
+
+
+    /* INFORMATION */
+
+    #Information > div{
+
+        width: 92%;
+
+        padding: 20px;
+    }
+
+
+    /* FOOTER */
+
+    #Quick_Links > div{
+
+        width: 92%;
+
+        margin-left: 4%;
+    }
+
+
+    #Quick_Links > div .footer_content > div > p{
+
+        line-height: 1.7;
+    }
+}
+
+
+
+
+/* =========================
+   RESPONSIVE GALLERY
+========================= */
+
+/* Desktop - Hamburger hidden */
+#Gallery_Head > section > nav > div > #menu{
+    display: none;
+}
+
+#Gallery_Head > section > nav > div > .hamburger{
+    display: none;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px){
+
+    #Gallery_Head{
+        min-height: 80vh;
+
+        >section{
+            height: 80vh;
+
+            >nav{
+                >div{
+                    width: 92%;
+                    margin-left: 4%;
+
+                    >figure{
+                        width: 140px;
+
+                        >img{
+                            height: 35px;
+                        }
+                    }
+
+                    >ul{
+                        gap: 0;
+
+                        >li{
+                            >a{
+                                padding: 10px 10px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    >a{
+                        padding: 9px 14px;
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            >div{
+                height: 500px;
+
+                >section{
+                    width: 80%;
+                    margin: 20% 10%;
+
+                    >h1{
+                        font-size: 52px;
+                    }
+
+                    >p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #Pictures_Tab{
+        min-height: auto;
+
+        >section{
+            width: 92%;
+            margin-left: 4%;
+            height: auto;
+
+            .content{
+                height: 260px;
+
+                >h2{
+                    font-size: 40px;
+                }
+            }
+
+            .photoes{
+                height: auto;
+                margin-top: -60px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 14px;
+
+                >figure{
+                    height: 250px;
+
+                    >img{
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #Social_Information{
+        height: 35vh;
+
+        >div{
+            width: 80%;
+        }
+    }
+
+
+    #Quick_Links{
+        >div{
+            width: 92%;
+            margin-left: 4%;
+
+            .links{
+                height: auto;
+
+                >div{
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto;
+                    row-gap: 50px;
+
+                    >section{
+                        &:nth-of-type(1),
+                        &:nth-of-type(2),
+                        &:nth-of-type(3),
+                        &:nth-of-type(4){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .footer_content{
+                height: auto;
+                padding: 20px 0;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    #Gallery_Head{
+        min-height: 70vh;
+
+        >section{
+            height: 70vh;
+
+            >nav{
+                height: 70px;
+
+                >div{
+                    width: 90%;
+                    margin-left: 5%;
+
+                    >figure{
+                        width: 130px;
+                    }
+
+                    >#menu{
+                        display: none;
+                    }
+
+                    >.hamburger{
+                        display: block;
+                        font-size: 28px;
+                        cursor: pointer;
+                        color: var(--nav-color);
+                        order: 3;
+                    }
+
+                    >ul{
+                        display: none;
+                        position: absolute;
+                        top: 70px;
+                        left: 0;
+                        width: 100%;
+                        background-color: white;
+                        flex-direction: column;
+                        padding: 10px 0;
+                        border-top: 1px solid var(--footer-text);
+
+                        >li{
+                            width: 100%;
+                            text-align: center;
+
+                            >a{
+                                display: block;
+                                padding: 14px;
+                            }
+                        }
+                    }
+
+                    >#menu:checked ~ .nav-links{
+                        display: flex;
+                    }
+
+                    >a{
+                        display: none;
+                    }
+                }
+            }
+
+            >div{
+                height: 450px;
+
+                >section{
+                    width: 90%;
+                    margin: 30% 5%;
+
+                    >span{
+                        font-size: 12px;
+                    }
+
+                    >h1{
+                        font-size: 42px;
+                        line-height: 1.1;
+                    }
+
+                    >p{
+                        font-size: 14px;
+
+                        >br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* =========================
+       GALLERY - 2 IMAGES
+       IN EACH ROW
+    ========================= */
+
+    #Pictures_Tab{
+        min-height: auto;
+
+        >section{
+            width: 90%;
+            margin-left: 5%;
+            height: auto;
+
+            .content{
+                height: 250px;
+
+                >h2{
+                    font-size: 32px;
+                    margin-top: 60px;
+                }
+
+                >p{
+                    font-size: 14px;
+                }
+
+                >div{
+                    margin-top: 30px;
+
+                    >a{
+                        margin-inline: 2px;
+                        padding: 6px 10px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .photoes{
+                width: 100%;
+                height: auto;
+                margin-top: -30px;
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 10px;
+
+                >figure{
+                    width: 100%;
+                    height: 190px;
+                    border-radius: 8px;
+
+                    >img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* =========================
+       SOCIAL
+    ========================= */
+
+    #Social_Information{
+        height: auto;
+        padding: 70px 0;
+
+        >div{
+            width: 90%;
+            height: auto;
+
+            >div{
+                >i{
+                    font-size: 25px;
+                }
+
+                >h2{
+                    font-size: 22px;
+                }
+            }
+
+            >p{
+                font-size: 14px;
+                line-height: 1.7;
+
+                >br{
+                    display: none;
+                }
+            }
+
+            >a{
+                display: inline-block;
+                padding: 14px 25px;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+    /* =========================
+       FOOTER - ONE COLUMN
+    ========================= */
+
+    #Quick_Links{
+        min-height: auto;
+
+        >div{
+            width: 90%;
+            margin-left: 5%;
+
+            .links{
+                height: auto;
+                margin-top: 60px;
+
+                >div{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 45px;
+
+                    >section{
+
+                        &:nth-of-type(1),
+                        &:nth-of-type(2),
+                        &:nth-of-type(3),
+                        &:nth-of-type(4){
+                            width: 100%;
+                        }
+
+                        &:nth-of-type(2){
+                            >ul{
+                                text-align: left;
+                            }
+                        }
+
+                        &:nth-of-type(3){
+                            margin-right: 0;
+                        }
+
+                        &:nth-of-type(4){
+                            >form{
+                                >input,
+                                >button{
+                                    width: 100%;
+                                    max-width: 300px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer_content{
+                height: auto;
+                padding: 20px 0;
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                >div{
+                    >p{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+    #Gallery_Head{
+        >section{
+
+            >div{
+                height: 420px;
+
+                >section{
+                    margin-top: 35%;
+
+                    >h1{
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* Gallery stays 2 columns */
+
+    #Pictures_Tab{
+
+        >section{
+
+            .content{
+                height: 230px;
+
+                >h2{
+                    font-size: 28px;
+                }
+
+                >div{
+                    >a{
+                        padding: 6px 8px;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            .photoes{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+
+                >figure{
+                    height: 155px;
+                }
+            }
+        }
+    }
+
+
+    /* Footer stays ONE column */
+
+    #Quick_Links{
+
+        >div{
+
+            .links{
+
+                >div{
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+
+                    >section{
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
